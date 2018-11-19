@@ -1,7 +1,7 @@
 #ifndef NODE_H
 #define NODE_H
 
-#include "div/define.h"
+#include "../div/define.h"
 
 #include <vector>
 #include <string>

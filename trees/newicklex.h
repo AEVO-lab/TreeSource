@@ -3,7 +3,7 @@
 
 #include <string>
 #include "node.h"
-#include "div/util.h"
+#include "../div/util.h"
 
 #include <iostream>
 #include <set>

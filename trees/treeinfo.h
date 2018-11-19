@@ -7,7 +7,7 @@
 #include <sstream>
 #include <vector>
 #include "node.h"
-#include "div/util.h"
+#include "../div/util.h"
 
 #define STATE_SPECIATION 0
 #define STATE_DUPLICATION 1
