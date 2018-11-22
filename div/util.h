@@ -12,6 +12,7 @@
 #include <sstream>
 #include <vector>
 
+
 using namespace std;
 
 inline bool caseInsCharCompareN(char a, char b) {
@@ -497,10 +498,15 @@ public:
     }
 
 
-
-
-
-
+    static vector<int> GetVectorOfIntegers(int min, int max)
+    {
+        vector<int> v;
+        for (int i = min; i <= max; i++)
+        {
+            v.push_back(i);
+        }
+        return v;
+    }
 
 
 
