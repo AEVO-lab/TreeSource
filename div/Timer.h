@@ -8,7 +8,7 @@
 
 #include <map>
 #include <chrono>
-#include <thread>
+
 
 using namespace std;
 
@@ -45,10 +45,6 @@ public:
     }
 
 
-    void SleepMillis(int millis)
-    {
-        std::this_thread::sleep_for(std::chrono::milliseconds(millis));
-    }
 
 private:
     map<string, std::chrono::high_resolution_clock::time_point> clocks;
