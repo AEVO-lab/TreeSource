@@ -292,6 +292,12 @@ public:
         return str;
     }
 
+
+    static string GetFileExtension(string fname)
+    {
+        return fname.substr(fname.find_last_of(".") + 1);
+    }
+
     /**
       Just doubles every apostrophe in s, then wraps s with apostrophes
       **/
@@ -345,11 +351,29 @@ public:
     }
 
 
-    /*static bool FileExists(string filename)
+    //TODO: this is a non-standard hacl
+    static bool FileExists(string filename)
     {
-      ifstream ifile(filename.c_str());
-      return ifile;
-    }*/
+        std::ifstream fin(filename.c_str());
+        return fin.is_open();
+    }
+
+
+
+    static bool StartsWith(string mainStr, string toMatch)
+    {
+        if(mainStr.find(toMatch) == 0)
+            return true;
+        else
+            return false;
+    }
+
+
+    static bool Contains(string mainStr, string toMatch)
+    {
+        return (mainStr.find(toMatch) != std::string::npos);
+    }
+
 
     static vector<string> GetFileLines(string filename)
     {
@@ -440,7 +464,7 @@ public:
     }
 
 
-    static bool EndsWith (string fullString, string ending) {
+    static bool EndsWith(string fullString, string ending) {
         if (fullString.length() >= ending.length()) {
             return (0 == fullString.compare (fullString.length() - ending.length(), ending.length(), ending));
         } else {

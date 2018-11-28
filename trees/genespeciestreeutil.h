@@ -1,8 +1,8 @@
 #ifndef GENESPECIESTREEUTIL_H
 #define GENESPECIESTREEUTIL_H
 
-#include "trees/node.h"
-#include "trees/newicklex.h"
+#include "node.h"
+#include "newicklex.h"
 
 #include <unordered_map>
 #include <unordered_set>
